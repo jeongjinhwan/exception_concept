@@ -4,11 +4,40 @@
 package exception_concept;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+  public String getGreeting() {
+    return "Hello World!";
+  }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
+    CheckedExceptions chkExp = new CheckedExceptions();
+    UnCheckedExceptions unChkExp = new UnCheckedExceptions();
+    Errors err = new Errors();
+    ThrowHandling th = new ThrowHandling();
+
+    // chkExp
+    // chkExp.eFileNotFoundException();
+
+    // unChkExp
+    // try {
+    //   unChkExp.eArrayIndexOutOfBoundsException();
+    // } catch (ArrayIndexOutOfBoundsException ae) {
+    //   System.out.println("main catch");
+    //   ae.printStackTrace();
+    // }
+    // unChkExp.eArrayIndexOutOfBoundsException();
+
+    // err
+    // err.eOutOfMemoryError();
+
+    // th
+    // th.throwsHandlFileNotFoundException();
+    try {
+      th.throwHandlClassCastException();
+    } catch (ClassCastException ce) {
+      System.out.println("main catch");
+      ce.printStackTrace();
     }
+  }
+
 }
