@@ -58,12 +58,12 @@ java.lang.Object
 
 ## 번외
 - "@SneakyThrows" 어노테이션을 사용하면, Checked exceptions -> RuntimeException 으로 처리 가능.
- - lombok을 적용 해야 사용 가능.
- - 사용 시 주의 필요.
-  - Checked -> Runtime 으로 변경하므로, 명시적인 예외처리를 묵시적으로 변경됨.
- - 장점
-  - 코드가 간결해짐 ???
- - 적용 방법.
+  - lombok을 적용 해야 사용 가능.
+  - 사용 시 주의 필요.
+    - Checked -> Runtime 으로 변경하므로, 명시적인 예외처리를 묵시적으로 변경됨.
+  - 장점
+    - 코드가 간결해짐 ???
+   - 적용 방법.
 ```java
 @SneakyThrows(IOException.class)
 public void noSearchException(String fileNm) {
@@ -75,7 +75,7 @@ public void noSearchException(String fileNm) {
   reader.close();
 }
  ```
-참고 :
+## 참고 :
 > [https://www.tutorialspoint.com/java/java_exceptions.htm](https://www.tutorialspoint.com/java/java_exceptions.htm)
 > [https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html)
 > [https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Error.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Error.html)
