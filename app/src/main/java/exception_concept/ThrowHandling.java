@@ -40,5 +40,4 @@ public class ThrowHandling {
   public void throwHandlClassCastException2()throws ClassCastException {
     throw new ClassCastException();
   }
-
 }

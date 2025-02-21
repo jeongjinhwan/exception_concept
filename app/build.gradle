@@ -18,7 +18,8 @@ repositories {
 dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation libs.junit.jupiter
-
+    compileOnly 'org.projectlombok:lombok:1.18.30' // 최신 버전 사용
+    annotationProcessor 'org.projectlombok:lombok:1.18.30' // 컴파일 시 Lombok 적용
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     // This dependency is used by the application.

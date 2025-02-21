@@ -3,6 +3,8 @@
  */
 package exception_concept;
 
+import java.io.IOException;
+
 public class App {
   public String getGreeting() {
     return "Hello World!";
@@ -17,6 +19,14 @@ public class App {
 
     // chkExp
     // chkExp.eFileNotFoundException();
+    
+    chkExp.noSearchException("none1.exe");
+
+    try {
+      chkExp.noSearchException2("none1.exe");
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
 
     // unChkExp
     // try {
@@ -32,12 +42,13 @@ public class App {
 
     // th
     // th.throwsHandlFileNotFoundException();
-    try {
-      th.throwHandlClassCastException();
-    } catch (ClassCastException ce) {
-      System.out.println("main catch");
-      ce.printStackTrace();
-    }
+    // try {
+    //   th.throwHandlClassCastException();
+    // } catch (ClassCastException ce) {
+    //   System.out.println("main catch");
+    //   ce.printStackTrace();
+    // }
+
   }
 
 }
